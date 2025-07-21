@@ -8,35 +8,49 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Air Pollution Control Equipment Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 32 79% 26%; /* text color #78350f */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 48 89% 96%;
+    --card-foreground: 32 79% 26%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 48 89% 96%;
+    --popover-foreground: 32 79% 26%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 48 89% 91%; /* #fef3c7 */
+    --primary-foreground: 32 79% 26%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 45 96% 56%; /* #fbbf24 */
+    --secondary-foreground: 32 79% 26%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 48 89% 96%;
+    --muted-foreground: 29 83% 31%; /* secondary text #92400e */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 160 84% 20%; /* #065f46 */
+    --accent-foreground: 48 89% 96%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 48 89% 96%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 48 50% 85%;
+    --input: 48 50% 90%;
+    --ring: 160 84% 20%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+    
+    /* Custom brand gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(48 89% 91%), hsl(45 96% 66%));
+    --gradient-accent: linear-gradient(135deg, hsl(160 84% 20%), hsl(160 84% 30%));
+    --gradient-organic: linear-gradient(180deg, hsl(48 89% 96%), hsl(48 89% 91%));
+    
+    /* Shadows with brand colors */
+    --shadow-organic: 0 10px 30px -10px hsl(45 96% 56% / 0.3);
+    --shadow-accent: 0 4px 20px -4px hsl(160 84% 20% / 0.25);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +115,37 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Focus styles for accessibility */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 2px;
   }
 }
