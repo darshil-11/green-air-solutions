@@ -53,11 +53,93 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-16 lg:py-24 bg-background">
+    <section id="services" className="py-8 lg:py-16 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        
+        {/* Feature Highlights */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Compliance Section */}
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <h3 className="font-raleway font-bold text-2xl lg:text-3xl text-foreground">
+                Environmental Compliance Made Simple
+              </h3>
+              <p className="font-work-sans text-muted-foreground">
+                Navigate complex environmental regulations with confidence. Our comprehensive 
+                compliance solutions ensure your operations meet all requirements while 
+                optimizing performance and reducing costs.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {[
+                "Real-time monitoring and reporting",
+                "Automated compliance documentation",
+                "Expert regulatory guidance",
+                "Risk assessment and mitigation"
+              ].map((item, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <div className="bg-accent text-accent-foreground p-1 rounded-full">
+                    <FileCheck className="h-4 w-4" />
+                  </div>
+                  <span className="font-work-sans text-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+            <Button variant="accent" className="font-work-sans group">
+              Learn About Compliance
+              <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </Button>
+          </div>
+          <div className="relative">
+            <img
+              src={complianceImage}
+              alt="Environmental compliance and monitoring systems"
+              className="w-full h-auto rounded-2xl shadow-organic"
+            />
+          </div>
+        </div>
+        {/* Design & Optimization Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16">
+          <div className="relative order-2 lg:order-1">
+            <img
+              src={designImage}
+              alt="System design and optimization process"
+              className="w-full h-auto rounded-2xl shadow-organic"
+            />
+          </div>
+          <div className="space-y-6 order-1 lg:order-2">
+            <div className="space-y-4">
+              <h3 className="font-raleway font-bold text-2xl lg:text-3xl text-foreground">
+                Optimized Design for Maximum Efficiency
+              </h3>
+              <p className="font-work-sans text-muted-foreground">
+                Our expert engineering team designs custom solutions that maximize 
+                pollution control effectiveness while minimizing energy consumption 
+                and operational costs.
+              </p>
+            </div>
+            <div className="space-y-4">
+              {[
+                "Advanced computational modeling",
+                "Energy-efficient system design",
+                "Performance optimization algorithms",
+                "Continuous improvement processes"
+              ].map((item, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <div className="bg-secondary text-secondary-foreground p-1 rounded-full">
+                    <TrendingUp className="h-4 w-4" />
+                  </div>
+                  <span className="font-work-sans text-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+            <Button variant="secondary" className="font-work-sans group">
+              Explore Design Solutions
+              <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </Button>
+          </div>
+        </div>
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 mt-16">
           <h2 className="font-raleway font-bold text-3xl lg:text-4xl text-foreground mb-4">
             Comprehensive Air Quality Solutions
           </h2>
@@ -67,7 +149,6 @@ const ServicesSection = () => {
             and operational excellence.
           </p>
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
@@ -98,99 +179,6 @@ const ServicesSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Feature Highlights */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Compliance Section */}
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h3 className="font-raleway font-bold text-2xl lg:text-3xl text-foreground">
-                Environmental Compliance Made Simple
-              </h3>
-              <p className="font-work-sans text-muted-foreground">
-                Navigate complex environmental regulations with confidence. Our comprehensive 
-                compliance solutions ensure your operations meet all requirements while 
-                optimizing performance and reducing costs.
-              </p>
-            </div>
-            
-            <div className="space-y-4">
-              {[
-                "Real-time monitoring and reporting",
-                "Automated compliance documentation",
-                "Expert regulatory guidance",
-                "Risk assessment and mitigation"
-              ].map((item, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <div className="bg-accent text-accent-foreground p-1 rounded-full">
-                    <FileCheck className="h-4 w-4" />
-                  </div>
-                  <span className="font-work-sans text-foreground">{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <Button variant="accent" className="font-work-sans group">
-              Learn About Compliance
-              <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-            </Button>
-          </div>
-
-          <div className="relative">
-            <img
-              src={complianceImage}
-              alt="Environmental compliance and monitoring systems"
-              className="w-full h-auto rounded-2xl shadow-organic"
-            />
-          </div>
-        </div>
-
-        {/* Design & Optimization Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16">
-          
-          <div className="relative order-2 lg:order-1">
-            <img
-              src={designImage}
-              alt="System design and optimization process"
-              className="w-full h-auto rounded-2xl shadow-organic"
-            />
-          </div>
-
-          <div className="space-y-6 order-1 lg:order-2">
-            <div className="space-y-4">
-              <h3 className="font-raleway font-bold text-2xl lg:text-3xl text-foreground">
-                Optimized Design for Maximum Efficiency
-              </h3>
-              <p className="font-work-sans text-muted-foreground">
-                Our expert engineering team designs custom solutions that maximize 
-                pollution control effectiveness while minimizing energy consumption 
-                and operational costs.
-              </p>
-            </div>
-            
-            <div className="space-y-4">
-              {[
-                "Advanced computational modeling",
-                "Energy-efficient system design",
-                "Performance optimization algorithms",
-                "Continuous improvement processes"
-              ].map((item, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <div className="bg-secondary text-secondary-foreground p-1 rounded-full">
-                    <TrendingUp className="h-4 w-4" />
-                  </div>
-                  <span className="font-work-sans text-foreground">{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <Button variant="secondary" className="font-work-sans group">
-              Explore Design Solutions
-              <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-            </Button>
-          </div>
         </div>
       </div>
     </section>

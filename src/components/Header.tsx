@@ -24,11 +24,12 @@ const Header = () => {
             </div>
             <div>
               <h1 className="font-raleway font-bold text-xl text-foreground">
-                Air Pollution Control Equipment
+                {/* Air Pollution Control Equipment */}
+                Rudra Inc
               </h1>
-              <p className="font-work-sans text-sm text-muted-foreground">
+              {/* <p className="font-work-sans text-sm text-muted-foreground">
                 Design ⋅ Optimisation ⋅ Compliance
-              </p>
+              </p> */}
             </div>
           </div>
 
