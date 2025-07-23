@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Leaf } from "lucide-react";
-import heroImage from "@/assets/hero-illustration.jpg";
+import airPurifierBanner from "@/assets/air-purifier-banner.webp";
 import { ArrowDownRight } from "lucide-react";
 
 
@@ -14,6 +14,11 @@ const HeroSection = () => {
 
   return (
     <section className="relative bg-gradient-organic py-16 lg:py-24 overflow-hidden min-h-screen">
+      <img
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-30"
+        src={airPurifierBanner}
+        alt=""
+      />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
@@ -80,21 +85,6 @@ const HeroSection = () => {
                 <ArrowDownRight className="transition-transform duration-100 group-hover:translate-x-1" />
               </Button>
             </div>
-          </div>
-
-          {/* Right Column - Hero Image */}
-          <div className="relative animate-fade-in">
-            <div className="relative z-10">
-              <img
-                src={heroImage}
-                alt="Air pollution control equipment and environmental solutions"
-                className="w-full h-auto rounded-2xl shadow-organic hover:shadow-xl transition-shadow duration-500"
-              />
-            </div>
-
-            {/* Decorative Elements */}
-            <div className="absolute -top-6 -right-6 w-72 h-72 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
-            <div className="absolute -bottom-6 -left-6 w-96 h-96 bg-accent/5 rounded-full blur-3xl -z-10"></div>
           </div>
         </div>
       </div>
